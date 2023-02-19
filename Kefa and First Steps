@@ -1,0 +1,9 @@
+n=int(input())
+array1=list(map(int,input().split()))
+maximum_length=1
+left=0
+for index in range(1,len(array1)):
+    if array1[index]<array1[index-1]:
+        left=index
+    maximum_length=max(index-left+1,maximum_length)
+print(maximum_length)
