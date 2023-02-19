@@ -1,0 +1,14 @@
+for _ in range(int(input())):
+    n=int(input())
+    strings=[]
+    for i in range(n):
+        string=input()
+        strings.append(string)
+    look=set(strings)
+    answer=["0"]*n
+    for i in range(n):
+        for j in range(1,len(strings[i])):
+            if strings[i][:j] in look and strings[i][j:] in look:
+                answer[i]="1"
+    print("".join(answer))
+
